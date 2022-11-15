@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.3">
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="scraper" enabled="true">
       <stringProp name="TestPlan.comments">please update company name (code for company without any space)</stringProp>
@@ -152,7 +152,7 @@ vars.putObject(&quot;jobList&quot;,jobList);</stringProp>
             <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="title" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">false</stringProp>
               <stringProp name="RegexExtractor.refname">title</stringProp>
-              <stringProp name="RegexExtractor.regex">&lt;span class=&quot;w-blog-entry-title-h&quot;&gt;(.+?)&lt;/span&gt;</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;div class=&quot;job-title&quot;&gt;(.+?)&lt;/div&gt;</stringProp>
               <stringProp name="RegexExtractor.template">$1$</stringProp>
               <stringProp name="RegexExtractor.default">not_found</stringProp>
               <stringProp name="RegexExtractor.match_number">-1</stringProp>
@@ -161,7 +161,7 @@ vars.putObject(&quot;jobList&quot;,jobList);</stringProp>
             <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="link" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">false</stringProp>
               <stringProp name="RegexExtractor.refname">link</stringProp>
-              <stringProp name="RegexExtractor.regex">&lt;a class=&quot;w-blog-entry-link&quot; href=&quot;(.+?)&quot;&gt;</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;a class=&quot;button&quot; href=&quot;(.+?)&quot;&gt;See more&lt;/a&gt;</stringProp>
               <stringProp name="RegexExtractor.template">$1$</stringProp>
               <stringProp name="RegexExtractor.default">not_found</stringProp>
               <stringProp name="RegexExtractor.match_number">-1</stringProp>
